@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AskSports</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+<header>
+    <img class="logo" src="./assets/logo.png" alt="logo AskSports" width="800" height="200">
+</header>
+<main>
+    <section>
+        <div>
+            <h1 class="text">Assistende do torcedor</h1>
+            <p class="text">Tire suas duvidas sobre seus esportes favoritos</p>
+            <form id="form">
+                <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini..." required>
+                <select id="gameSelect" >
+                    <option value="">Selecione um esporte</option>
+                    <option value="futebol">Futebol</option>
+                    <option value="volei">Volei</option>
+                    <option value="basquete">Basquete</option>
+                </select>
+                <input id="question" type="text" placeholder="EX: Proximo jogo do Mirassol" required>
+                <button id="ask">
+                    Ask
+                </button>
+            </form>
+            <div id="aiResponse" class="hidden">
+                <div class="response-content">
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>    
+</body>
+<script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+<script src="./script.js"></script>
+</html>

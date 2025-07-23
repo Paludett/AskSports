@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *,
+:root {
+    font-family: "Inter";
+    line-height: 155%;
+}
+
+header {
+    text-align: center;
+    padding-top: 1rem;
+    margin-left: 1.5rem;
+}
+
+header img{
+    width: 27rem;
+    height: 12rem;
+}
+body {
+    background-image: url(./assets/bckg.png);
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: black;
+    height: 120vh;
+}  
+
+section {  
+    padding-left: 8px;
+    color: aliceblue;
+    background-image: linear-gradient(90deg, green 0%, rgb(73, 232, 41) 100%);
+    border-radius: 0.625rem;
+    height: 150px;
+    padding-top: 3px;
+}
+
+main {
+    max-width: 36rem;
+    width: 90%;
+    margin: 3rem auto;
+    /* Sempre vai ficar centralizado dos lado por causa do auto, e em cima sempre vai ter os 3rem de altura */
+}
+
+section > div{
+    background-color: #3b3843;
+    height: 261px;
+    position: relative;
+    right: 8px;
+    width: 576px;
+    border-radius: 0.5rem;  
+    padding: 1rem;   
+    font-size: 0.9rem;
+    
+}
+
+.text {
+    position: relative;
+    left: -2px;
+    top: -0.2rem;
+}
+
+a {
+    color: rgb(73, 232, 41);
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #dcdceb;
+}
+
+/* animations */
+main > section {
+    opacity: 0;
+    transform: translateY(2rem);
+
+    animation-name: appear;
+    animation-duration: 800ms;
+    animation-fill-mode: forwards;
+
+}
+
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin: 1% 0;
+}
+
+input, select, button{
+    all: unset;
+    border: 2px solid rgb(6, 31, 2);
+    border-radius: 8px;
+    background-color: #f0ffffff;
+    color: #3b3843;
+    padding: 0.500rem;
+    transition: all 0.3s;
+}
+input{
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(39, 251, 67);
+    color: rgb(17, 23, 23);
+    transition: all 0.3s;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: translateY(-2.5px);
+    box-shadow: 0 0.2px 0.9rem rgba(240, 255, 255,0.3);
+}
+
+select:hover{
+    cursor: pointer;
+    transform: translateY(-1.5px);
+    box-shadow: 0 0.2px 0.7rem rgba(179, 255, 255,0.3);
+} 
+
+button:disabled{
+    transform: initial;
+    box-shadow: initial;
+    cursor: not-allowed;
+    transition: initial;
+}
+
+#aiResponse {
+    background-color: #3b3843;
+    border-radius: 0.5rem;
+    margin: 2.0rem;
+    height: auto;
+    position: relative;
+    right: 48px;
+    width: 576px;
+    padding: 0.8rem;
+}
+
+#aiResponse ul {
+    padding-left: 1.5rem;
+    opacity: 0.8;
+    color: rgb(96, 255, 117);
+}
+
+#aiResponse p {
+    color: white;
+}
+
+.loading {
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.hidden{
+    display: none;
+}
