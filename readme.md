@@ -1,1 +1,2 @@
 AskSports é meu primeiro projeto desenvolvido com HTML, CSS e JavaScript. Nele, os usuários podem perguntar a uma IA sobre Futebol, Basquete e Vôlei, recebendo informações atualizadas. O projeto utiliza a API Gemini do Google.
+Link:https://paludett.github.io/AskSports/
